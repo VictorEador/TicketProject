@@ -33,19 +33,42 @@
 
 				foreach($billets as $billet)
 				{
+					$nbr_reponses = GET_messages_count($billet['id']);
+					if($nbr_reponses > 1)
+					{
+						?>
+							<a class='billet' href='messenger.php?billet=<?php echo $billet['id'] ?>'>
+								<div class='billet_title'>
+									<?php
+										echo nl2br(htmlspecialchars($billet['name']));
+									?>
+								</div>
+								<div class='billet_infos'>
+									<?php
+										echo '+ '.($nbr_reponses-1).' réponses';
+									?>
+								</div>
+							</a>
+						<?php
+					}
+					else
+					{
+						?>
+							<a class='billet_noanswer' href='messenger.php?billet=<?php echo $billet['id'] ?>'>
+								<div class='billet_title'>
+									<?php
+										echo nl2br(htmlspecialchars($billet['name']));
+									?>
+								</div>
+								<div class='billet_infos'>
+									<?php
+										echo '- Aucunes réponses';
+									?>
+								</div>
+							</a>
+						<?php
+					}
 					?>
-					<a class='billet' href='messenger.php?billet=<?php echo $billet['id'] ?>'>
-						<div class='billet_title'>
-							<?php
-								echo nl2br(htmlspecialchars($billet['name']));
-							?>
-						</div>
-						<div class='billet_infos'>
-							<?php
-								echo get_messages_count($billet['id']).' réponses';
-							?>
-						</div>
-					</a>
 					<?php
 				}
 			?>

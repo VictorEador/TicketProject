@@ -194,8 +194,8 @@ body
 .user_message_contenu
 {
 	background-color: #111;
-	padding: 25px;
-	padding-left: 14px;
+	padding: 20px;
+	padding-left: 18px;
 }
 
 .message_info
@@ -219,8 +219,8 @@ body
 
 .other_message_contenu
 {
-	padding: 25px;
-	padding-left: 14px;
+	padding: 20px;
+	padding-left: 18px;
 	border: 1px solid #111;
 }
 
@@ -272,6 +272,26 @@ body
 }
 
 .billet:hover
+{
+	background-color: #fc3a3a;
+}
+
+.billet_noanswer
+{
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 8px;
+	width: 150px;
+	height: 200px;
+	background-color: #fff;
+	margin-top: 20px;
+	margin-right: 20px;
+	color: #111;
+	text-decoration: none;
+	border: 1px solid #111;
+}
+
+.billet_noanswer:hover
 {
 	background-color: #fc3a3a;
 }

@@ -107,13 +107,18 @@
 			<div id='infos_post'>
 				<p id='infos_title'>Infos >>></p>
 				<?php
-					if(get_messages_count($post_id) == 1)
+					$nbr_messages = get_messages_count($post_id);
+					if($nbr_messages == 1)
 					{
 						echo 'Ce billet ne contient aucunes réponses';
 					}
+					else if($nbr_messages == 2)
+					{
+						echo 'Ce billet ne contient qu\'une seule réponse';
+					}
 					else
 					{
-						echo 'Ce billet contient ' . get_messages_count($post_id) . ' réponses';
+						echo 'Ce billet contient ' . ($nbr_messages-1) . ' réponses';
 					}
 				?>
 			</div>
