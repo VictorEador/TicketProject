@@ -293,7 +293,8 @@ body
 
 .billet_noanswer:hover
 {
-	background-color: #fc3a3a;
+	border: 1px solid #fc3a3a;
+	color: #fc3a3a;
 }
 
 .billet_title
@@ -395,4 +396,17 @@ body
 	background-color: #54d1e7;
 	border: 1px solid #b7e7f7;
 	border-radius: 1px;
+}
+
+#button_up
+{
+	position: fixed;
+	padding: 4px 12px;
+	font-size: 16px;
+	top: 16px;
+	right: 300px;
+	color: #111;
+	background-color: #fff;
+	border: 1px solid #111;
+	text-decoration: none;
 }

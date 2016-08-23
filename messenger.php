@@ -123,5 +123,8 @@
 				?>
 			</div>
 		</div>
+		<a href='messenger.php?billet=<?php echo $post_id?>' id='button_up'>
+			Remonter
+		</a>
 	</body>
 </html>
